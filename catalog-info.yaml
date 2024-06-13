@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gskc-utility-prod-service
+  description: This is the production ECS service for the GSKC utility.
+  annotations:
+    aws.amazon.com/amazon-ecs-service-arn: arn:aws:ecs:ap-southeast-1:390312767375:service/GSKC-PROD-CLUSTER/gskc-utility-prod-service
+  tags:
+    - ecs
+    - aws
+    - production
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/guest
+  system: gskc-system
